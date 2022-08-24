@@ -1,13 +1,364 @@
+@import "solid.css";
+@import "solid.min.css";
+@import "all.css";
+
 body {
-  margin: 0;
+    margin: 0 ;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
+  background-color: #121212;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html{
+    font-size: 13px;
+}
+a{
+   text-decoration: none;
+   
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+h2{ 
+    color: #fff;
+}
+span{
+    color: #fff;
+}
+.container{
+    margin: 80PX 40px;
+}
+.container-header{
+    margin: 20px 40px;
+}
+.wrapper{
+    margin: 0 200px;
+}
+.hover {
+    display: flex;
+    align-items: baseline;
+    grid-gap: 20px;
+}
+.hover span.all{
+    opacity: 0;
+    color: #fff;
+    transition: all , 2s;
+}
+.hover a h2 {
+    color: #fff;
+    
+}
+.hover:hover span.all{
+    opacity: 1;
+    
+}
+
+
+.header {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: #121212;
+    z-index: 10;
+    width: 100%;
+    padding: 20px 0;
+}
+.header img{
+    width: 62px;
+    height: 15px;
+}
+.header .right{
+    display: flex;
+    align-items: center;
+    grid-gap: 40px;
+}
+.header .right li.home a{
+    color: #6eb8ff;
+}
+.header .left{
+    display: flex;
+    align-items: center;
+    grid-gap: 30px;
+    margin-left: 80px;
+}
+.header .left a i{
+    color: #fff;
+    font-size: 1.7rem;
+
+}
+.header .left .signup p{
+    border: #fff solid 1px;
+    border-radius: 4px;
+    padding: 5px 5px 10px 5px;
+    margin: 0;
+}
+.menu ul {
+    display: flex;
+    grid-gap: 30px;
+    
+}
+.menu ul li a{
+    color: #fff ;
+}
+ul.movie {
+    list-style: none;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+ul.movie li{
+    position: relative;
+    
+}
+ul.movie li p{
+    margin-top: 0;
+}
+ul.movie li span{
+    color: #cccc;
+}
+ul.movie li img{
+    width: 191px;
+    border-radius: 5px;
+}
+ul.movie li:hover .content{
+    opacity: 1;
+   
+}
+ul.movie li:hover .player{
+    opacity: 1;
+}
+ul.movie li .content{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 281px;
+    background-color: #040404a1;
+    transition:all , 1s ;
+}
+ul.movie li .content .position{
+position: absolute;
+bottom: 0;
+margin-bottom:10px ;
+}
+ul.movie li .content p{
+    margin-right: 10px;
+}
+ul.movie li img.player{
+    opacity: 0;
+    width: 50px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 1;
+    border-radius: 50%;
+    transition:all , 1s ;
+}
+ul.live{
+    display: flex;
+    justify-content: space-between;
+}
+ul.live li {
+    background-color: #222327;
+    border-radius: 5px;
+}
+ul.live li .extra{
+    margin: 20px 10px;
+}
+ul.live p{
+    color: #fff;
+    font-size: 1.15rem;
+}
+ul.live img{
+    width: 398px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+ul.rectangle{
+    display: flex;
+    justify-content: space-between;
+}
+ul.rectangle img{
+    width: 398px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+ul.rectangle p{
+     color: #fff;
+}
+ul.longerMovie{
+    display: flex;
+    justify-content: space-between;
+}
+ul.longerMovie li{
+    position: relative;
+}
+ul.longerMovie li p {
+    margin-top: 0
+}
+ul.longerMovie li:hover .content{
+    opacity: 1;
+   
+}
+ul.longerMovie li .content{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 382px;
+    background-color: #040404cc;
+    transition:all , 1s ;
+}
+ul.longerMovie li .content .position{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+ul.longerMovie li .content p{
+    margin-right: 10px;
+}
+ul.longerMovie img{
+    width: 191px;
+    border-radius: 5px;
+}
+ul.longerMovie p{
+    color: #fff;
+}
+ul.star{
+    display: flex;
+    justify-content: space-between;
+}
+ul.star li {
+    color: #fff;
+    text-align: center;
+}
+ul.star li img{
+    width: 190px;
+    border-radius: 50%;
+}
+.footer .bottomHeader{
+    background-color: #222327;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+}
+.footer .bottomHeader ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.footer .bottomHeader ul li{
+    padding: 10px ;
+}
+.footer .bottomHeader ul li a{
+    color: #cccc;
+    font-weight: bold;
+}
+.footer .application {
+    display: flex;
+    justify-content: space-between;
+    background-color: #222327;
+    border-radius: 5px;
+    align-items: center;
+}
+.footer .application .namava{
+    display: flex;
+    color: #cccc;
+    align-items: center;
+    grid-gap: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.footer .application .namava p{
+    font-size: 1.3rem;
+}
+.footer .application .namava img{
+    width: 74px;
+    height: 74px;
+    border-radius: 6px;
+}
+.footer .application .moreApp ul{
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+    margin-left: 20px;
+    text-align: center;
+}
+.footer .application .moreApp ul li{
+    background-color: #37383e;
+    width: 80px;
+    border-radius: 6px;
+}
+.footer .application .moreApp ul li p{
+    font-size: 1rem;
+    color: #fff;
+    margin-top:0 ;
+}
+.footer .application .moreApp ul li span {
+    margin-bottom:0 ;
+    font-size: 0.7rem;
+    color: #cccc;
+}
+.footer .application .moreApp ul .more{
+    color: #6eb8ff;
+    font-weight: bold;
+}
+.footer .aboutus{
+    color: #cccc;
+    display: flex;
+    align-items: center;
+    grid-gap: 80px;
+}
+.footer .aboutus .about {
+    line-height: 25px;
+}
+.footer .aboutus .about .bold{
+    font-weight: bold;
+}
+.footer .aboutus .img {
+    display: flex;
+    grid-gap: 10px;
+}
+.footer .aboutus .img img{
+    width: 90px;
+    height: 100px;
+    border-radius: 10px;
+}
+.footer .last{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 1px #37383e;
+    padding: 20px 0;
+  
+}
+.footer .last p{
+    color:#cccc ;
+    font-size: 0.8rem;
+   
+}
+.footer .last .social{
+    color: #cccc;
+    font-size: 2rem;
+   
+}
+.footer .last .social i{
+    margin-right:20px;
 }
